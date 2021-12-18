@@ -145,8 +145,11 @@ Encore.configureDevServerOptions((options) => {
     directory: join(__dirname, './resources/views'),
     watch: true,
   })
+  options.static.push({
+    directory: join(__dirname, './tailwind.config.js'),
+    watch: true,
+  })
 })
-
 /*
 |--------------------------------------------------------------------------
 | CSS precompilers support
@@ -169,8 +172,9 @@ Encore.configureDevServerOptions((options) => {
 | PostCSS or CSS.
 |
 */
-// Encore.enablePostCssLoader()
-// Encore.configureCssLoader(() => {})
+Encore.enablePostCssLoader()
+// eslint-disable-next-line prettier/prettier
+Encore.configureCssLoader(() => { })
 
 /*
 |--------------------------------------------------------------------------
