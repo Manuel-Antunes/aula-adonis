@@ -6,7 +6,7 @@ export default class UsersController {
     try {
       const data = ctx.request.all()
       await User.create(data)
-      ctx.response.redirect('/login')
+      return ctx.response.redirect('/login')
     } catch (error) {
       ctx.response.badRequest('Error while creating user')
     }
