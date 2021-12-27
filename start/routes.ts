@@ -22,3 +22,8 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/register', 'UsersController.create')
 Route.post('/users', 'UsersController.store')
+Route.get('/login', 'AuthController.create')
+Route.post('/login', 'AuthController.store')
+Route.post('/logout', 'AuthController.destroy')
+Route.get('/', 'HomeController.index').middleware('auth:web')
+Route.resource('users.posts', 'UserPostsController')
