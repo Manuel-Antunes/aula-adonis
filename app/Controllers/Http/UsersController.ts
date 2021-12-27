@@ -11,4 +11,8 @@ export default class UsersController {
       ctx.response.badRequest('Error while creating user')
     }
   } // cria um no banco
+
+  public async create(cxt: HttpContextContract) {
+    return cxt.view.render('auth/register', {})
+  }
 }

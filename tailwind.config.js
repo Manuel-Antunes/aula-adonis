@@ -7,8 +7,14 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      blur: {
+        sm: '2px',
+      },
+    },
+  },
+  variants: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }
