@@ -1,0 +1,20 @@
+@layout('layouts/main')
+
+@section('title')
+  {{post.slug}}
+@endsection
+
+@section('content')
+  <div class="w-full p-5 mt-10 flex justify-center">
+    <div class="px-10 my-4 py-6 w-full bg-white rounded-lg shadow-md">
+      <div class="flex justify-between items-center">
+          <span class="font-light text-gray-600">{{post.createdAt}}</span>
+          <a class="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500" href="#">{{post.slug}}</a>
+      </div>
+      <div class="mt-2">
+          <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">{{post.name}}</a>
+          <p class="mt-2 text-gray-600">{{post.content}}!</p>
+      </div>
+    </div>
+  </div>
+@endsection
